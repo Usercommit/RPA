@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="446,1520" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="446,4102" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -43,24 +43,39 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Standard" sap:VirtualizedContainerService.HintSize="426,1420" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Standard" sap:VirtualizedContainerService.HintSize="426,4002" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:AnchorBase AnchorPosition="Top" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'list item'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_27" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="59" OffsetY="34" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="4060d83a21de7c7e4b1f6f68f90a735f" Selector="&lt;wnd app='explorer.exe' cls='WorkerW' idx='*' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Microsoft Teams' role='list item' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:AnchorBase AnchorPosition="Top" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_5">
       <ui:AnchorBase.Action>
         <ActivityAction x:TypeArguments="ui:Anchor">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
           </ActivityAction.Argument>
-          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Aktion Click 'push button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Aktion Click 'list item'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
             <ui:Click.CursorPosition>
-              <ui:CursorPosition OffsetX="23" OffsetY="17" Position="TopLeft" />
+              <ui:CursorPosition OffsetX="59" OffsetY="34" Position="TopLeft" />
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="713609e6cde4cce2885491a7c12792c9" Selector="&lt;ctrl role='push button' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8c6532d897ed93d607356d263b353ed4" Selector="&lt;ctrl role='list item' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -73,9 +88,9 @@
         </ActivityAction>
       </ui:AnchorBase.Action>
       <ui:AnchorBase.AnchorProvider>
-        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Anker Element 'push button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Anker Find Element 'list item'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5">
           <ui:WaitUiElementAppear.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="24a39ce827fd5d95436d9bac8101fd38" Selector="&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='MSTaskSwWClass' title='Ausgeführte Anwendungen' /&gt;&lt;wnd cls='MSTaskListWClass' title='Ausgeführte Anwendungen' /&gt;&lt;ctrl name='Ausgeführte Anwendungen' role='tool bar' /&gt;&lt;ctrl automationid='Chrome' idx='2' name='Google Chrome – 1 aktives Fenster' role='push button' /&gt;">
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8c6532d897ed93d607356d263b353ed4" Selector="&lt;wnd app='explorer.exe' cls='WorkerW' idx='*' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Microsoft Teams' role='list item' /&gt;">
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
@@ -87,50 +102,12 @@
         </ui:WaitUiElementAppear>
       </ui:AnchorBase.AnchorProvider>
     </ui:AnchorBase>
-    <ui:AnchorBase AnchorPosition="Top" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
-      <ui:AnchorBase.Action>
-        <ActivityAction x:TypeArguments="ui:Anchor">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
-          </ActivityAction.Argument>
-          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Aktion Click 'push button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-            <ui:Click.CursorPosition>
-              <ui:CursorPosition OffsetX="19" OffsetY="27" Position="TopLeft" />
-            </ui:Click.CursorPosition>
-            <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="24a39ce827fd5d95436d9bac8101fd38" Selector="&lt;ctrl role='push button' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
-                <ui:Target.WaitForReady>
-                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                </ui:Target.WaitForReady>
-              </ui:Target>
-            </ui:Click.Target>
-          </ui:Click>
-        </ActivityAction>
-      </ui:AnchorBase.Action>
-      <ui:AnchorBase.AnchorProvider>
-        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Anker Find Element 'push button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
-          <ui:WaitUiElementAppear.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="713609e6cde4cce2885491a7c12792c9" Selector="&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='MSTaskSwWClass' title='Ausgeführte Anwendungen' /&gt;&lt;wnd cls='MSTaskListWClass' title='Ausgeführte Anwendungen' /&gt;&lt;ctrl name='Ausgeführte Anwendungen' role='tool bar' /&gt;&lt;ctrl automationid='Chrome' idx='2' name='Google Chrome – 1 aktives Fenster' role='push button' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:WaitUiElementAppear.Target>
-        </ui:WaitUiElementAppear>
-      </ui:AnchorBase.AnchorProvider>
-    </ui:AnchorBase>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Intermediate D3D Window'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
-        <ui:CursorPosition OffsetX="1081" OffsetY="19" Position="TopLeft" />
+        <ui:CursorPosition OffsetX="44" OffsetY="29" Position="TopLeft" />
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="67caf98582884ac60e4c3f2e9fad372a" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Verwalten von Projekten mit GIT - Google Chrome' /&gt;&lt;wnd cls='Intermediate D3D Window' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5789e617e48fb4a89f92656fd93228c7" Selector="&lt;wnd app='teams.exe' cls='Chrome_WidgetWin_1' title='Dateianzeige für XLSX | Microsoft Teams' /&gt;&lt;ctrl name='Dateianzeige für XLSX | Microsoft Teams' role='document' /&gt;&lt;ctrl name='App-Leiste, Pfeile nach oben oder nach unten verwenden, um durch*' role='grouping' /&gt;&lt;ctrl name='Aktivität Symbolleiste' role='push button' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -140,12 +117,12 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
-        <ui:CursorPosition OffsetX="32" OffsetY="21" Position="TopLeft" />
+        <ui:CursorPosition OffsetX="48" OffsetY="43" Position="TopLeft" />
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="42018f30148637357c15e0ed619b8717" Selector="&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='MSTaskSwWClass' title='Ausgeführte Anwendungen' /&gt;&lt;wnd cls='MSTaskListWClass' title='Ausgeführte Anwendungen' /&gt;&lt;ctrl name='Ausgeführte Anwendungen' role='tool bar' /&gt;&lt;ctrl automationid='C:\Users\Martin\AppData\Local\UiPath\app-19.12.0-beta0061\UiPath*' idx='1' name='UiPath Studio – 2 aktive Fenster' role='menu button' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b10716db80bfaf1e88e8dfb82a7ca4c5" Selector="&lt;wnd app='teams.exe' cls='Chrome_WidgetWin_1' title='Dateianzeige für XLSX | Microsoft Teams' /&gt;&lt;ctrl name='Dateianzeige für XLSX | Microsoft Teams' role='document' /&gt;&lt;ctrl name='App-Leiste, Pfeile nach oben oder nach unten verwenden, um durch*' role='grouping' /&gt;&lt;ctrl name='Teams Symbolleiste' role='push button' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -155,12 +132,12 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'list item'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
-        <ui:CursorPosition OffsetX="45" OffsetY="34" Position="TopLeft" />
+        <ui:CursorPosition OffsetX="67" OffsetY="22" Position="TopLeft" />
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="18983321a550b141cc00280bef8cee65" Selector="&lt;wnd app='uipath.studio.exe' cls='HwndWrapper*' title='Grundlegende Aufzeichnung' /&gt;&lt;ctrl name='Assistenten' role='grouping' /&gt;&lt;ctrl name='Speichern und beenden' role='push button' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0d0ef77f5ce4525528efca59768ae5fe" Selector="&lt;wnd app='teams.exe' cls='Chrome_WidgetWin_1' title='Jour Fixe (Institute of Management &amp;amp; Information Systems (mis)) *' /&gt;&lt;ctrl name='Jour Fixe (Institute of Management &amp;amp; Information Systems (mis)) *' role='document' /&gt;&lt;ctrl name='Kanalliste von Team &amp;quot;Institute of Management &amp;amp;amp; Information S*' role='grouping' /&gt;&lt;ctrl name='Jour Fixe Weitere Optionen' role='list item' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -170,9 +147,189 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'page tab  Dateien'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
-        <ui:CursorPosition OffsetX="51" OffsetY="41" Position="TopLeft" />
+        <ui:CursorPosition OffsetX="37" OffsetY="13" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="31e1332c1c87c479e85787c5482b096e" Selector="&lt;wnd app='teams.exe' cls='Chrome_WidgetWin_1' title='Jour Fixe (Institute of Management &amp;amp; Information Systems (mis)) *' /&gt;&lt;ctrl name='Jour Fixe (Institute of Management &amp;amp; Information Systems (mis)) *' role='document' /&gt;&lt;ctrl name='Dateien' role='page tab' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'table Liste'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="200" OffsetY="77" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="087c526cba790d625f7a6bc81374f845" Selector="&lt;wnd app='teams.exe' cls='Chrome_WidgetWin_1' title='Jour Fixe (Institute of Management &amp;amp; Information Systems (mis)) *' /&gt;&lt;ctrl name='Jour Fixe (Institute of Management &amp;amp; Information Systems (mis)) *' role='document' /&gt;&lt;ctrl name='Liste von Ordnern, Dateien oder Elementen. Verwenden Sie die NAC*' role='table' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'client'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="591" OffsetY="288" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3b9bd1387425f7514565ed876a625263" Selector="&lt;wnd app='teams.exe' cls='Chrome_WidgetWin_1' title='Dateianzeige für XLSX | Microsoft Teams' /&gt;&lt;ctrl idx='4' role='client' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="36" OffsetY="28" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f37ecab2d581a9408e06df2ba29680f7" Selector="&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='MSTaskSwWClass' title='Ausgeführte Anwendungen' /&gt;&lt;wnd cls='MSTaskListWClass' title='Ausgeführte Anwendungen' /&gt;&lt;ctrl name='Ausgeführte Anwendungen' role='tool bar' /&gt;&lt;ctrl automationid='Chrome' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Intermediate D3D Window'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="749" OffsetY="61" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7784e0432058c98a00be913fb87be63a" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Neuer Tab - Google Chrome' /&gt;&lt;wnd cls='Intermediate D3D Window' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="27" OffsetY="14" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c2eca176eacbc728b8036aeb7e449e26" Selector="&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='MSTaskSwWClass' title='Ausgeführte Anwendungen' /&gt;&lt;wnd cls='MSTaskListWClass' title='Ausgeführte Anwendungen' /&gt;&lt;ctrl name='Ausgeführte Anwendungen' role='tool bar' /&gt;&lt;ctrl automationid='com.squirrel.Teams.Teams' idx='2' name='Microsoft Teams – 1 aktives Fenster' role='push button' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'client'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="571" OffsetY="255" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b1d78e1ba522d3d2003b3b4f321f571f" Selector="&lt;wnd app='teams.exe' cls='Chrome_WidgetWin_1' title='Dateianzeige für XLSX | Microsoft Teams' /&gt;&lt;ctrl idx='4' role='client' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="30" OffsetY="36" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="90bbb2e2e8d9dc880670d254abd80e63" Selector="&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='MSTaskSwWClass' title='Ausgeführte Anwendungen' /&gt;&lt;wnd cls='MSTaskListWClass' title='Ausgeführte Anwendungen' /&gt;&lt;ctrl name='Ausgeführte Anwendungen' role='tool bar' /&gt;&lt;ctrl automationid='Chrome' idx='2' name='Google Chrome – 1 aktives Fenster' role='push button' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="23" OffsetY="23" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="90bbb2e2e8d9dc880670d254abd80e63" Selector="&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='MSTaskSwWClass' title='Ausgeführte Anwendungen' /&gt;&lt;wnd cls='MSTaskListWClass' title='Ausgeführte Anwendungen' /&gt;&lt;ctrl name='Ausgeführte Anwendungen' role='tool bar' /&gt;&lt;ctrl automationid='Chrome' idx='2' name='Google Chrome – 1 aktives Fenster' role='push button' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="23" OffsetY="19" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ef2cdb50fb411ffbc927a39d92c9348e" Selector="&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='MSTaskSwWClass' title='Ausgeführte Anwendungen' /&gt;&lt;wnd cls='MSTaskListWClass' title='Ausgeführte Anwendungen' /&gt;&lt;ctrl name='Ausgeführte Anwendungen' role='tool bar' /&gt;&lt;ctrl automationid='com.squirrel.Teams.Teams' idx='2' name='Microsoft Teams – 1 aktives Fenster' role='push button' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'client'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="488" OffsetY="276" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9d9fce0f4afbae81640861dbd05b134a" Selector="&lt;wnd app='teams.exe' cls='Chrome_WidgetWin_1' title='Dateianzeige für XLSX | Microsoft Teams' /&gt;&lt;ctrl idx='4' role='client' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="21" OffsetY="25" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="90bbb2e2e8d9dc880670d254abd80e63" Selector="&lt;wnd app='explorer.exe' cls='Shell_TrayWnd' idx='*' /&gt;&lt;wnd cls='MSTaskSwWClass' title='Ausgeführte Anwendungen' /&gt;&lt;wnd cls='MSTaskListWClass' title='Ausgeführte Anwendungen' /&gt;&lt;ctrl name='Ausgeführte Anwendungen' role='tool bar' /&gt;&lt;ctrl automationid='Chrome' idx='2' name='Google Chrome – 1 aktives Fenster' role='push button' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="52" OffsetY="23" Position="TopLeft" />
       </ui:Click.CursorPosition>
       <ui:Click.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="cfdf75569244f3f7f95d6f2b5da6dce0" Selector="&lt;wnd app='uipath.studio.exe' cls='HwndWrapper*' title='Grundlegende Aufzeichnung' /&gt;&lt;ctrl name='Assistenten' role='grouping' /&gt;&lt;ctrl name='Speichern und beenden' role='push button' /&gt;">
@@ -185,5 +342,111 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'list item'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_29" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="59" OffsetY="34" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="4060d83a21de7c7e4b1f6f68f90a735f" Selector="&lt;wnd app='explorer.exe' cls='WorkerW' idx='*' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Microsoft Teams' role='list item' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:AnchorBase AnchorPosition="Top" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_6">
+      <ui:AnchorBase.Action>
+        <ActivityAction x:TypeArguments="ui:Anchor">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+          </ActivityAction.Argument>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Aktion Click 'list item'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_30" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="59" OffsetY="34" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8c6532d897ed93d607356d263b353ed4" Selector="&lt;ctrl role='list item' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Click.Target>
+          </ui:Click>
+        </ActivityAction>
+      </ui:AnchorBase.Action>
+      <ui:AnchorBase.AnchorProvider>
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Anker Find Element 'list item'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6">
+          <ui:WaitUiElementAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8c6532d897ed93d607356d263b353ed4" Selector="&lt;wnd app='explorer.exe' cls='WorkerW' idx='*' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Microsoft Teams' role='list item' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:WaitUiElementAppear.Target>
+        </ui:WaitUiElementAppear>
+      </ui:AnchorBase.AnchorProvider>
+    </ui:AnchorBase>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'list item'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_31" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="59" OffsetY="34" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="4060d83a21de7c7e4b1f6f68f90a735f" Selector="&lt;wnd app='explorer.exe' cls='WorkerW' idx='*' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Microsoft Teams' role='list item' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:AnchorBase AnchorPosition="Top" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
+      <ui:AnchorBase.Action>
+        <ActivityAction x:TypeArguments="ui:Anchor">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+          </ActivityAction.Argument>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Aktion Click 'list item'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_32" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="59" OffsetY="34" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8c6532d897ed93d607356d263b353ed4" Selector="&lt;ctrl role='list item' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Click.Target>
+          </ui:Click>
+        </ActivityAction>
+      </ui:AnchorBase.Action>
+      <ui:AnchorBase.AnchorProvider>
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Anker Find Element 'list item'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7">
+          <ui:WaitUiElementAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8c6532d897ed93d607356d263b353ed4" Selector="&lt;wnd app='explorer.exe' cls='WorkerW' idx='*' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Microsoft Teams' role='list item' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:WaitUiElementAppear.Target>
+        </ui:WaitUiElementAppear>
+      </ui:AnchorBase.AnchorProvider>
+    </ui:AnchorBase>
   </Sequence>
 </Activity>
