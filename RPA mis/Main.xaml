@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="614,4836.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="614,4976" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -50,7 +50,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Kursinfos in Formular übertragen" sap:VirtualizedContainerService.HintSize="594,4776.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_49">
+  <Sequence DisplayName="Kursinfos in Formular übertragen" sap:VirtualizedContainerService.HintSize="594,4876" sap2010:WorkflowViewState.IdRef="Sequence_49">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="name" />
       <Variable x:TypeArguments="ui:GenericValue" Name="gen_number" />
@@ -78,39 +78,40 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="552,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Test&quot;]" />
     <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Kursinfos lesen" sap:VirtualizedContainerService.HintSize="552,1654" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" Visible="False" Workbook="[read_Excel]" WorkbookPath="[path_Excel]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Daten lesen " sap:VirtualizedContainerService.HintSize="376,1545.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_44">
+          <Sequence DisplayName="Daten lesen " sap:VirtualizedContainerService.HintSize="376,1545" sap2010:WorkflowViewState.IdRef="Sequence_44">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadCell Cell="B3" DisplayName="Read login" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_12" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B3" DisplayName="Read login" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_12" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[login]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="B4" DisplayName="Read pw" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_13" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B4" DisplayName="Read pw" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_13" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[pw]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="B8" DisplayName="Read name" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_14" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B8" DisplayName="Read name" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_14" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="B9" DisplayName="Read number" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_15" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B9" DisplayName="Read number" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_15" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="ui:GenericValue">[gen_number]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[number]</OutArgument>
               </Assign.To>
@@ -118,22 +119,22 @@
                 <InArgument x:TypeArguments="x:String">[gen_number.ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ExcelReadCell Cell="B10" DisplayName="Read descripton" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_17" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B10" DisplayName="Read descripton" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_17" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[descripton]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="B11" DisplayName="Read link" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_18" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B11" DisplayName="Read link" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_18" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[link]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="B12" DisplayName="Read start" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_19" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B12" DisplayName="Read start" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_19" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="ui:GenericValue">[gen_start]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[start]</OutArgument>
               </Assign.To>
@@ -311,7 +312,7 @@
                           </ui:Target>
                         </p:CvTypeIntoWithDescriptor.Target>
                       </p:CvTypeIntoWithDescriptor>
-                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (106,302,508,38)&quot; +&#xD;&#xA;&quot;Anchor: Text '* Course Number' (108,280,121,12)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="c3f418d2e9c9fae244d912737587e252" Text="[number]" Version="V1">
+                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (106,302,508,38)&quot; +&#xA;&quot;Anchor: Text '* Course Number' (108,280,121,12)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="c3f418d2e9c9fae244d912737587e252" Text="[number]" Version="V1">
                         <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                           <uc:CvDescriptor>
                             <uc:CvDescriptor.Anchors>
@@ -335,7 +336,7 @@
                           </ui:Target>
                         </p:CvTypeIntoWithDescriptor.Target>
                       </p:CvTypeIntoWithDescriptor>
-                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (106,382,514,56)&quot; +&#xD;&#xA;&quot;Anchor: Text '* Course Description' (108,360,145,14)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_3" InformativeScreenshot="9da0191a693675236cba808ea9da1e42" Text="[descripton]" Version="V1">
+                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (106,382,514,56)&quot; +&#xA;&quot;Anchor: Text '* Course Description' (108,360,145,14)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_3" InformativeScreenshot="9da0191a693675236cba808ea9da1e42" Text="[descripton]" Version="V1">
                         <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                           <uc:CvDescriptor>
                             <uc:CvDescriptor.Anchors>
@@ -359,7 +360,7 @@
                           </ui:Target>
                         </p:CvTypeIntoWithDescriptor.Target>
                       </p:CvTypeIntoWithDescriptor>
-                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (106,480,510,37)&quot; +&#xD;&#xA;&quot;Anchor: Text '* Course Info Link' (108,458,125,12)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="e460318c3d3b9fb949d2f6fc061af073" Text="[link]" Version="V1">
+                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (106,480,510,37)&quot; +&#xA;&quot;Anchor: Text '* Course Info Link' (108,458,125,12)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="e460318c3d3b9fb949d2f6fc061af073" Text="[link]" Version="V1">
                         <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                           <uc:CvDescriptor>
                             <uc:CvDescriptor.Anchors>
@@ -383,7 +384,7 @@
                           </ui:Target>
                         </p:CvTypeIntoWithDescriptor.Target>
                       </p:CvTypeIntoWithDescriptor>
-                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (643,222,514,38)&quot; +&#xD;&#xA;&quot;Anchor: Text '* Course Start Date' (647,200,135,11)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="688196f688e329bce9aaecac3ad38dc5" Text="[start]" Version="V1">
+                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (643,222,514,38)&quot; +&#xA;&quot;Anchor: Text '* Course Start Date' (647,200,135,11)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="688196f688e329bce9aaecac3ad38dc5" Text="[start]" Version="V1">
                         <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                           <uc:CvDescriptor>
                             <uc:CvDescriptor.Anchors>
@@ -407,7 +408,7 @@
                           </ui:Target>
                         </p:CvTypeIntoWithDescriptor.Target>
                       </p:CvTypeIntoWithDescriptor>
-                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (643,302,515,38)&quot; +&#xD;&#xA;&quot;Anchor: Text '* Course End Date' (647,280,127,12)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_6" InformativeScreenshot="751eda090cf2aa490bb411d2fbc4f6cd" Text="[ende]" Version="V1">
+                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (643,302,515,38)&quot; +&#xA;&quot;Anchor: Text '* Course End Date' (647,280,127,12)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_6" InformativeScreenshot="751eda090cf2aa490bb411d2fbc4f6cd" Text="[ende]" Version="V1">
                         <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                           <uc:CvDescriptor>
                             <uc:CvDescriptor.Anchors>
@@ -431,7 +432,7 @@
                           </ui:Target>
                         </p:CvTypeIntoWithDescriptor.Target>
                       </p:CvTypeIntoWithDescriptor>
-                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (646,382,511,38)&quot; +&#xD;&#xA;&quot;Anchor: Text '* Credit Amount Requested Per Student' (647,360,281,14)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_7" InformativeScreenshot="b73c5c4a3844eea4ca6051c3d8562e14" Text="[credits]" Version="V1">
+                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (646,382,511,38)&quot; +&#xA;&quot;Anchor: Text '* Credit Amount Requested Per Student' (647,360,281,14)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_7" InformativeScreenshot="b73c5c4a3844eea4ca6051c3d8562e14" Text="[credits]" Version="V1">
                         <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                           <uc:CvDescriptor>
                             <uc:CvDescriptor.Anchors>
@@ -455,7 +456,7 @@
                           </ui:Target>
                         </p:CvTypeIntoWithDescriptor.Target>
                       </p:CvTypeIntoWithDescriptor>
-                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (643,462,515,38)&quot; +&#xD;&#xA;&quot;Anchor: Text '* Estimated Enrollment' (647,440,161,12)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_8" InformativeScreenshot="12a91b185ab128448c9de7e6f1bbdef6" Text="[enrollment]" Version="V1">
+                      <p:CvTypeIntoWithDescriptor SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (643,462,515,38)&quot; +&#xA;&quot;Anchor: Text '* Estimated Enrollment' (647,440,161,12)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,134" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_8" InformativeScreenshot="12a91b185ab128448c9de7e6f1bbdef6" Text="[enrollment]" Version="V1">
                         <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                           <uc:CvDescriptor>
                             <uc:CvDescriptor.Anchors>
