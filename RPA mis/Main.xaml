@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="614,4976" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="611.333333333333,4844.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -50,7 +50,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Kursinfos in Formular übertragen" sap:VirtualizedContainerService.HintSize="594,4876" sap2010:WorkflowViewState.IdRef="Sequence_49">
+  <Sequence DisplayName="Kursinfos in Formular übertragen" sap:VirtualizedContainerService.HintSize="594,4780" sap2010:WorkflowViewState.IdRef="Sequence_49">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="name" />
       <Variable x:TypeArguments="ui:GenericValue" Name="gen_number" />
@@ -78,40 +78,39 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="552,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Rollback-Test&quot;]" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Kursinfos lesen" sap:VirtualizedContainerService.HintSize="552,1654" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" Visible="False" Workbook="[read_Excel]" WorkbookPath="[path_Excel]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Kursinfos lesen" sap:VirtualizedContainerService.HintSize="552,1657.33333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" Visible="False" Workbook="[read_Excel]" WorkbookPath="[path_Excel]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Daten lesen " sap:VirtualizedContainerService.HintSize="376,1545" sap2010:WorkflowViewState.IdRef="Sequence_44">
+          <Sequence DisplayName="Daten lesen " sap:VirtualizedContainerService.HintSize="376,1548.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_44">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadCell Cell="B3" DisplayName="Read login" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_12" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B3" DisplayName="Read login" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_12" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[login]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="B4" DisplayName="Read pw" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_13" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B4" DisplayName="Read pw" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_13" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[pw]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="B8" DisplayName="Read name" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_14" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B8" DisplayName="Read name" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_14" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="B9" DisplayName="Read number" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_15" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B9" DisplayName="Read number" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_15" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="ui:GenericValue">[gen_number]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[number]</OutArgument>
               </Assign.To>
@@ -119,22 +118,22 @@
                 <InArgument x:TypeArguments="x:String">[gen_number.ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ExcelReadCell Cell="B10" DisplayName="Read descripton" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_17" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B10" DisplayName="Read descripton" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_17" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[descripton]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="B11" DisplayName="Read link" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_18" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B11" DisplayName="Read link" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_18" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[link]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="B12" DisplayName="Read start" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_19" SheetName="Tabelle1">
+            <ui:ExcelReadCell Cell="B12" DisplayName="Read start" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_19" SheetName="Tabelle1">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="ui:GenericValue">[gen_start]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[start]</OutArgument>
               </Assign.To>
@@ -147,7 +146,7 @@
                 <OutArgument x:TypeArguments="ui:GenericValue">[gen_ende]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[ende]</OutArgument>
               </Assign.To>
@@ -160,7 +159,7 @@
                 <OutArgument x:TypeArguments="ui:GenericValue">[gen_credits]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[credits]</OutArgument>
               </Assign.To>
@@ -173,7 +172,7 @@
                 <OutArgument x:TypeArguments="ui:GenericValue">[gen_enrollment]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_5">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[enrollment]</OutArgument>
               </Assign.To>
